@@ -10,6 +10,7 @@ import CoreData
 
 struct ContentView: View {
     //MARK: - Property
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @State var task: String = ""
     @State private var showNewTaskView: Bool = false
     
@@ -45,6 +46,41 @@ struct ContentView: View {
                 
                 VStack {
                     //MARK: - Header
+                    
+                    HStack(spacing: 10) {
+                        // Title
+                        Text("To do")
+                          .font(.system(.largeTitle, design: .rounded))
+                          .fontWeight(.heavy)
+                          .padding(.leading, 4)
+                        
+                        Spacer()
+                        // Edit Button
+                        
+                        EditButton()
+                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .padding(.horizontal, 10)
+                            .frame(minWidth: 70, minHeight: 24)
+                            .background(
+                              Capsule().stroke(Color.white, lineWidth: 2)
+                            )
+                        
+                        // Light : Dark Button
+                        Button  {
+                            // TOGGLE APPEARANCE
+                            isDarkMode.toggle()
+                            playSound(sound: "sound-tap", type: "mp3")
+                            feedback.notificationOccurred(.success)
+                        } label: {
+                            Image(systemName: isDarkMode ? "moon.stars.fill" :  "sun.max.fill")
+                              .resizable()
+                              .frame(width: 24, height: 24)
+                              .font(.system(.title, design: .rounded))
+                        }//: Light : Dark Button
+                    }//: HStack
+                    .padding()
+                    .foregroundColor(.white)
+                    
                     Spacer(minLength: 80)
                     //MARK: - NewTaskButton
                     Button  {
@@ -107,12 +143,7 @@ struct ContentView: View {
             .onAppear() {
                 UITableView.appearance().backgroundColor = UIColor.clear
             }
-            .navigationBarTitle("Daily Tasks" , displayMode: .large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-            }//: Tool Bar
+            .navigationBarHidden(true)
             .background(
             BackgroundImageView()
             )
