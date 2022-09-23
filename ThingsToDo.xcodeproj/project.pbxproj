@@ -17,6 +17,11 @@
 		0113F7C528D5431700997C43 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0113F7C428D5431700997C43 /* sound-tap.mp3 */; };
 		0113F7C728D5431C00997C43 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0113F7C628D5431C00997C43 /* sound-rise.mp3 */; };
 		0113F7CE28D54AAC00997C43 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113F7CD28D54AAC00997C43 /* Constant.swift */; };
+		01BC371728DA87940065DA62 /* HideKeyBoardExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BC371628DA87930065DA62 /* HideKeyBoardExtention.swift */; };
+		01BC371928DA8CA10065DA62 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BC371828DA8CA10065DA62 /* BackgroundImageView.swift */; };
+		01CEFBA928DD30EB00A9CDBD /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEFBA828DD30EB00A9CDBD /* NewTaskView.swift */; };
+		01CEFBAB28DD355F00A9CDBD /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEFBAA28DD355F00A9CDBD /* SoundPlayer.swift */; };
+		01CEFBAD28DD370E00A9CDBD /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEFBAC28DD370E00A9CDBD /* BlankView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		0113F7C628D5431C00997C43 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
 		0113F7C828D5444A00997C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0113F7CD28D54AAC00997C43 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		01BC371628DA87930065DA62 /* HideKeyBoardExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyBoardExtention.swift; sourceTree = "<group>"; };
+		01BC371828DA8CA10065DA62 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		01CEFBA828DD30EB00A9CDBD /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
+		01CEFBAA28DD355F00A9CDBD /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		01CEFBAC28DD370E00A9CDBD /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				0113F7A728D5413900997C43 /* ContentView.swift */,
+				01BC371828DA8CA10065DA62 /* BackgroundImageView.swift */,
+				01CEFBA828DD30EB00A9CDBD /* NewTaskView.swift */,
+				01CEFBAC28DD370E00A9CDBD /* BlankView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				0113F7CD28D54AAC00997C43 /* Constant.swift */,
+				01CEFBAA28DD355F00A9CDBD /* SoundPlayer.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -140,6 +154,7 @@
 		0113F7C028D5428900997C43 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				01BC371628DA87930065DA62 /* HideKeyBoardExtention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -225,7 +240,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0113F7AF28D5413A00997C43 /* Persistence.swift in Sources */,
+				01CEFBAD28DD370E00A9CDBD /* BlankView.swift in Sources */,
+				01BC371928DA8CA10065DA62 /* BackgroundImageView.swift in Sources */,
+				01BC371728DA87940065DA62 /* HideKeyBoardExtention.swift in Sources */,
 				0113F7A828D5413900997C43 /* ContentView.swift in Sources */,
+				01CEFBAB28DD355F00A9CDBD /* SoundPlayer.swift in Sources */,
+				01CEFBA928DD30EB00A9CDBD /* NewTaskView.swift in Sources */,
 				0113F7CE28D54AAC00997C43 /* Constant.swift in Sources */,
 				0113F7B228D5413A00997C43 /* ThingsToDo.xcdatamodeld in Sources */,
 				0113F7A628D5413900997C43 /* ThingsToDoApp.swift in Sources */,
