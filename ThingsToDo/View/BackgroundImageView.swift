@@ -13,8 +13,6 @@ struct BackgroundImageView: View {
         .resizable()
         .scaledToFill()
         .ignoresSafeArea(.all)
-        
-        
     }
 }
 

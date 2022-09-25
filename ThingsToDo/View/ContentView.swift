@@ -23,7 +23,6 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
     
     //MARK: - Function
-    
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
@@ -105,17 +104,7 @@ struct ContentView: View {
                     // Task List
                     List {
                         ForEach(items) { item in
-                            
-                            VStack(alignment: .leading) {
-                                Text(item.task ?? "")
-                                    .font(.headline)
-                                    .fontWeight(.bold)
-                                
-                                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                                    .font(.footnote)
-                                    .foregroundColor(.gray)
-                            }
-                            
+                            ListRowItemView( item: item)
                         }
                         .onDelete(perform: deleteItems)
                     }//: List
