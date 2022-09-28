@@ -49,8 +49,7 @@ struct NewTaskView: View {
                     .foregroundColor(.pink)
                     .font(.system(size: 24, weight: .bold, design: .rounded))
                     .padding()
-                    .background(
-                      isDarkMode ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemBackground)
+                    .background(isDarkMode ? .gray.opacity(0.5) : .gray
                     )
                     .cornerRadius(10)
                 //: Save Button
@@ -64,14 +63,14 @@ struct NewTaskView: View {
                 }
                 .disabled(isButtonDisabled)
                 .padding()
-                .foregroundColor(.white)
+                .foregroundColor(isDarkMode ? .white : .black)
                 .background(isButtonDisabled ? Color.blue:Color.pink)
                 .cornerRadius(10)
             }//: Vstack
             .padding(.horizontal)
             .padding(.vertical, 20)
             .background(
-              isDarkMode ? Color(UIColor.secondarySystemBackground) : Color.white
+                isDarkMode ? .white : .black
             )
             .cornerRadius(16)
             .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.65), radius: 24)
@@ -80,6 +79,8 @@ struct NewTaskView: View {
         .padding()
     }//: Body
 }
+
+
 
 //MARK: - Preview
 struct NewTaskView_Previews: PreviewProvider {

@@ -61,7 +61,7 @@ struct ContentView: View {
                             .padding(.horizontal, 10)
                             .frame(minWidth: 70, minHeight: 24)
                             .background(
-                              Capsule().stroke(Color.white, lineWidth: 2)
+                                Capsule().stroke(isDarkMode ? Color.white : Color.black, lineWidth: 2)
                             )
                         
                         // Light : Dark Button
@@ -71,14 +71,14 @@ struct ContentView: View {
                             playSound(sound: "sound-tap", type: "mp3")
                             feedback.notificationOccurred(.success)
                         } label: {
-                            Image(systemName: isDarkMode ? "moon.stars.fill" :  "sun.max.fill")
+                            Image(systemName: isDarkMode ? "moon.stars.fill" : "sun.max.fill" )
                               .resizable()
                               .frame(width: 24, height: 24)
                               .font(.system(.title, design: .rounded))
                         }//: Light : Dark Button
                     }//: HStack
                     .padding()
-                    .foregroundColor(.white)
+                    .foregroundColor( isDarkMode ? .white : .black)
                     
                     Spacer(minLength: 80)
                     //MARK: - NewTaskButton
@@ -92,7 +92,7 @@ struct ContentView: View {
                         Text("New Task")
                           .font(.system(size: 24, weight: .bold, design: .rounded))
                     }
-                    .foregroundColor(.white)
+                    .foregroundColor(isDarkMode ? .white : .black)
                     .padding(.horizontal, 20)
                     .padding(.vertical, 15)
                     .background(
@@ -108,17 +108,22 @@ struct ContentView: View {
                         }
                         .onDelete(perform: deleteItems)
                     }//: List
-                    .listStyle(InsetGroupedListStyle())
+                    .cornerRadius(20) // 1.
+                    .listStyle(.inset) // 2.
+                    .padding(20) // 3.
                     .shadow(color: Color(red: 0, green: 0, blue: 0,opacity: 0.3), radius: 12)
                     .padding(.vertical, 0)
                     .frame(maxWidth: 640)
                 }//: Vstack
+                .blur(radius: showNewTaskView ? 8.0 : 0, opaque: false)
+                .transition(.move(edge: .bottom))
+                .animation(.easeOut(duration: 0.5))
                 
                 //MARK: - NewTaskView
                 
                 if showNewTaskView {
                    
-                    BlankView(backgroundColor: Color.black, backgroundOpacity: 0.6)
+                    BlankView(backgroundColor: isDarkMode ? Color.black : Color.gray, backgroundOpacity: isDarkMode ?  0.3 : 0.5)
                         .onTapGesture {
                             withAnimation() {
                                 showNewTaskView = false
@@ -135,6 +140,8 @@ struct ContentView: View {
             .navigationBarHidden(true)
             .background(
             BackgroundImageView()
+                .blur(radius: showNewTaskView ? 8.0 : 0, opaque: false)
+                
             )
             .background(
                 backgroundGradient.ignoresSafeArea(.all)

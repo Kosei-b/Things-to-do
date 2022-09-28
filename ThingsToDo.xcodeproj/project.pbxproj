@@ -24,7 +24,38 @@
 		01CEFBAD28DD370E00A9CDBD /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEFBAC28DD370E00A9CDBD /* BlankView.swift */; };
 		01CEFBAF28DF9F2600A9CDBD /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEFBAE28DF9F2600A9CDBD /* ListRowItemView.swift */; };
 		01CEFBB128E02F9500A9CDBD /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEFBB028E02F9500A9CDBD /* CheckboxStyle.swift */; };
+		01CEFBBA28E3C6B600A9CDBD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CEFBB928E3C6B600A9CDBD /* WidgetKit.framework */; };
+		01CEFBBC28E3C6B600A9CDBD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CEFBBB28E3C6B600A9CDBD /* SwiftUI.framework */; };
+		01CEFBBF28E3C6B600A9CDBD /* ThindsToDoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEFBBE28E3C6B600A9CDBD /* ThindsToDoWidget.swift */; };
+		01CEFBC228E3C6B800A9CDBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CEFBC128E3C6B800A9CDBD /* Assets.xcassets */; };
+		01CEFBC428E3C6B800A9CDBD /* ThindsToDoWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 01CEFBC028E3C6B600A9CDBD /* ThindsToDoWidget.intentdefinition */; };
+		01CEFBC528E3C6B800A9CDBD /* ThindsToDoWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 01CEFBC028E3C6B600A9CDBD /* ThindsToDoWidget.intentdefinition */; };
+		01CEFBC828E3C6B800A9CDBD /* ThindsToDoWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01CEFBB728E3C6B600A9CDBD /* ThindsToDoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01CEFBC628E3C6B800A9CDBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0113F79A28D5413900997C43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01CEFBB628E3C6B600A9CDBD;
+			remoteInfo = ThindsToDoWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01CEFBCC28E3C6B800A9CDBD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				01CEFBC828E3C6B800A9CDBD /* ThindsToDoWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0113F7A228D5413900997C43 /* ThingsToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThingsToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +77,13 @@
 		01CEFBAC28DD370E00A9CDBD /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		01CEFBAE28DF9F2600A9CDBD /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
 		01CEFBB028E02F9500A9CDBD /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		01CEFBB728E3C6B600A9CDBD /* ThindsToDoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ThindsToDoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		01CEFBB928E3C6B600A9CDBD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		01CEFBBB28E3C6B600A9CDBD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		01CEFBBE28E3C6B600A9CDBD /* ThindsToDoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThindsToDoWidget.swift; sourceTree = "<group>"; };
+		01CEFBC028E3C6B600A9CDBD /* ThindsToDoWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ThindsToDoWidget.intentdefinition; sourceTree = "<group>"; };
+		01CEFBC128E3C6B800A9CDBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01CEFBC328E3C6B800A9CDBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +94,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01CEFBB428E3C6B600A9CDBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CEFBBC28E3C6B600A9CDBD /* SwiftUI.framework in Frameworks */,
+				01CEFBBA28E3C6B600A9CDBD /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				0113F7A428D5413900997C43 /* ThingsToDo */,
+				01CEFBBD28E3C6B600A9CDBD /* ThindsToDoWidget */,
+				01CEFBB828E3C6B600A9CDBD /* Frameworks */,
 				0113F7A328D5413900997C43 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				0113F7A228D5413900997C43 /* ThingsToDo.app */,
+				01CEFBB728E3C6B600A9CDBD /* ThindsToDoWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +222,26 @@
 			path = FrameWork;
 			sourceTree = "<group>";
 		};
+		01CEFBB828E3C6B600A9CDBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01CEFBB928E3C6B600A9CDBD /* WidgetKit.framework */,
+				01CEFBBB28E3C6B600A9CDBD /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01CEFBBD28E3C6B600A9CDBD /* ThindsToDoWidget */ = {
+			isa = PBXGroup;
+			children = (
+				01CEFBBE28E3C6B600A9CDBD /* ThindsToDoWidget.swift */,
+				01CEFBC028E3C6B600A9CDBD /* ThindsToDoWidget.intentdefinition */,
+				01CEFBC128E3C6B800A9CDBD /* Assets.xcassets */,
+				01CEFBC328E3C6B800A9CDBD /* Info.plist */,
+			);
+			path = ThindsToDoWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,15 +252,34 @@
 				0113F79E28D5413900997C43 /* Sources */,
 				0113F79F28D5413900997C43 /* Frameworks */,
 				0113F7A028D5413900997C43 /* Resources */,
+				01CEFBCC28E3C6B800A9CDBD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				01CEFBC728E3C6B800A9CDBD /* PBXTargetDependency */,
 			);
 			name = ThingsToDo;
 			productName = ThingsToDo;
 			productReference = 0113F7A228D5413900997C43 /* ThingsToDo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		01CEFBB628E3C6B600A9CDBD /* ThindsToDoWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01CEFBC928E3C6B800A9CDBD /* Build configuration list for PBXNativeTarget "ThindsToDoWidgetExtension" */;
+			buildPhases = (
+				01CEFBB328E3C6B600A9CDBD /* Sources */,
+				01CEFBB428E3C6B600A9CDBD /* Frameworks */,
+				01CEFBB528E3C6B600A9CDBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThindsToDoWidgetExtension;
+			productName = ThindsToDoWidgetExtension;
+			productReference = 01CEFBB728E3C6B600A9CDBD /* ThindsToDoWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -203,6 +292,9 @@
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					0113F7A128D5413900997C43 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					01CEFBB628E3C6B600A9CDBD = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
@@ -221,6 +313,7 @@
 			projectRoot = "";
 			targets = (
 				0113F7A128D5413900997C43 /* ThingsToDo */,
+				01CEFBB628E3C6B600A9CDBD /* ThindsToDoWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -238,6 +331,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01CEFBB528E3C6B600A9CDBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CEFBC228E3C6B800A9CDBD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -249,6 +350,7 @@
 				01CEFBAD28DD370E00A9CDBD /* BlankView.swift in Sources */,
 				01BC371928DA8CA10065DA62 /* BackgroundImageView.swift in Sources */,
 				01BC371728DA87940065DA62 /* HideKeyBoardExtention.swift in Sources */,
+				01CEFBC528E3C6B800A9CDBD /* ThindsToDoWidget.intentdefinition in Sources */,
 				0113F7A828D5413900997C43 /* ContentView.swift in Sources */,
 				01CEFBAB28DD355F00A9CDBD /* SoundPlayer.swift in Sources */,
 				01CEFBA928DD30EB00A9CDBD /* NewTaskView.swift in Sources */,
@@ -260,7 +362,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01CEFBB328E3C6B600A9CDBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CEFBC428E3C6B800A9CDBD /* ThindsToDoWidget.intentdefinition in Sources */,
+				01CEFBBF28E3C6B600A9CDBD /* ThindsToDoWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01CEFBC728E3C6B800A9CDBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01CEFBB628E3C6B600A9CDBD /* ThindsToDoWidgetExtension */;
+			targetProxy = 01CEFBC628E3C6B800A9CDBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0113F7B328D5413A00997C43 /* Debug */ = {
@@ -380,6 +499,7 @@
 		0113F7B628D5413A00997C43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -412,6 +532,7 @@
 		0113F7B728D5413A00997C43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,6 +562,60 @@
 			};
 			name = Release;
 		};
+		01CEFBCA28E3C6B800A9CDBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86JD9D26N9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThindsToDoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ThindsToDoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koseB.ThingsToDo.ThindsToDoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01CEFBCB28E3C6B800A9CDBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86JD9D26N9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThindsToDoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ThindsToDoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koseB.ThingsToDo.ThindsToDoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -458,6 +633,15 @@
 			buildConfigurations = (
 				0113F7B628D5413A00997C43 /* Debug */,
 				0113F7B728D5413A00997C43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01CEFBC928E3C6B800A9CDBD /* Build configuration list for PBXNativeTarget "ThindsToDoWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01CEFBCA28E3C6B800A9CDBD /* Debug */,
+				01CEFBCB28E3C6B800A9CDBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
