@@ -9,6 +9,10 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    
+    init() {
+            UICollectionView.appearance().backgroundColor = .clear
+    }
     //MARK: - Property
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @State var task: String = ""
@@ -71,7 +75,7 @@ struct ContentView: View {
                             playSound(sound: "sound-tap", type: "mp3")
                             feedback.notificationOccurred(.success)
                         } label: {
-                            Image(systemName: isDarkMode ? "moon.stars.fill" : "sun.max.fill" )
+                            Image(systemName: isDarkMode ? "sun.max.fill" : "moon.stars.fill" )
                               .resizable()
                               .frame(width: 24, height: 24)
                               .font(.system(.title, design: .rounded))
@@ -101,35 +105,34 @@ struct ContentView: View {
                     )
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 8, x: 0.0, y: 4.0)
 
-                    // Task List
-                    List {
-                        ForEach(items) { item in
-                            ListRowItemView( item: item)
-                        }
-                        .onDelete(perform: deleteItems)
-                    }//: List
-                    .cornerRadius(20) // 1.
-                    .listStyle(.inset) // 2.
-                    .padding(20) // 3.
-                    .shadow(color: Color(red: 0, green: 0, blue: 0,opacity: 0.3), radius: 12)
-                    .padding(.vertical, 0)
-                    .frame(maxWidth: 640)
+                    //MARK: - TaskList
+                    if #available(iOS 16.0, *) {
+                        List {
+                            ForEach(items) { item in
+                                ListRowItemView( item: item)
+                                    .listRowBackground(Color.clear)
+                                    .listRowSeparator(.hidden)
+                            }//: ForEach
+                            .onDelete(perform: deleteItems)
+                        }//: List
+                        .padding()
+                        .shadow(color: Color(red: 0, green: 0, blue: 0,opacity: 0.3), radius: 12)
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }//: Vstack
                 .blur(radius: showNewTaskView ? 8.0 : 0, opaque: false)
                 .transition(.move(edge: .bottom))
                 .animation(.easeOut(duration: 0.5))
-                
                 //MARK: - NewTaskView
                 
                 if showNewTaskView {
-                   
                     BlankView(backgroundColor: isDarkMode ? Color.black : Color.gray, backgroundOpacity: isDarkMode ?  0.3 : 0.5)
                         .onTapGesture {
                             withAnimation() {
                                 showNewTaskView = false
                             }//: WithAnimation
                         }//: OntapGesture
-                    
                     NewTaskView(isShowing: $showNewTaskView)
                     
                 }//: If( showNewTaskView)
